@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<link rel = "stylesheet" href="scholaris.css"
+
+  <head>
+    <h1 align="center">ENGLISH
+      <div class="w3-top">
+        <div class="w3-button w3-xxlarge w3-circle w3-white w3-left">+ </div>
+        <div class="w3-left w3-padding-5"><font size="2">ADD CLASS</font></div>
+        <div class="w3-button w3-padding-16 w3-right" onclick="w3_open()">☰</div>
+    <ul>
+      <li></h1>
+        <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 25px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:60px
+}
+</style>
+<style>
+#chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+#chip img {
+    float: center;
+    margin: 0 10px 0 -25px;
+    height: 500px;
+    width: 550px;
+}
+</style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a class="active" href="#ENGLISH ">ENGLISH</a></li>
+      <li><a href="#ALGEBRA II">ALGEBRA II</a></li>
+      <li><a href="#BIOLOGY">BIOLOGY </a></li>
+      <li><a href="#HISTORY">HISTORY</a></li>
+    </ul>
+
+    <hr></hr>
+    <table>
+      <td>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <div id="profile-container">
+        <image id="profileImage" src="english_image.jpg" />
+    </div>
+    <!--<input id="imageUpload" type="file"
+          name="profile_photo" placeholder="Photo" required="" capture>
+
+
+
+<button class="button"><font size= "4.5">UPLOAD FILE</font></button></center>-->
+
+    <div class="chip">
+</div>
+<input id="fileupload" type="file" />
+<br />
+<br />
+<div id="chip">
+  <div class="chip">
+</div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+$(function () {
+    $("#fileupload").change(function () {
+        $("#chip").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#chip").show();
+                $("#chip")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#chip").show();
+                    $("#chip").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#chip img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {.0
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
+<style type="text/css">
+
+</style>
+
+    <style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 40;
+    overflow: hidden;
+    background-color: #333;
+    }
+    li {
+    float: left;
+    }
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    li a:hover {
+    background-color: #111;
+    }
+
+    image{
+      width:500px;
+      length:550px;
+    }
+    </div>
+    </td>
+    </table>
+    </style>
+
+</body>
+</html>
