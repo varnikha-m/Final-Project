@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link rel = "stylesheet" href="scholaris.css">
-<script src="scholaris.js" type="text/javascript"></script>
+<script src="test.js" type="text/javascript"></script>
 <html>
   <head>
     <h1 align="center">SCHOLARIS
@@ -9,9 +9,6 @@
         <title>W3.CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-      <!-- <h1><font size="2">ADD CLASS</font> </h1>
-      <button class="w3-button w3-xlarge w3-circle w3-white w3-left">+</button></h1>-->
       <h1>  <div class="w3-top">
         <div class="w3-white w3-xlarge" style="max-width:1500px;margin:auto">
           <div class="w3-button w3-padding-16 w3-right" onclick="w3_open()">☰</div>
@@ -55,11 +52,77 @@
 <hr></hr>
 <table>
   <td>
- <div class="form-control">
-    <tr><label class="header">Profile Photo:</label> </tr>
-  <tr><input id="profile_photo" type="file" name="profile_photo" placeholder="Photo" required="" accept="image/*" capture />  <input type="submit" onclick="show_img()"></tr>
-    <img id="showimg" ></img>
-<tr> <div class="w3-button w3-padding-15 w3-center" onclick="w3_open()"><font size="4">I'm working on</font></div> </tr>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #chip {
+        display: inline-block;
+        padding: 0 25px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+    #chip img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="chip">
+    </div>
+    <input id="fileupload" type="file" />
+    <hr />
+    <br />
+    <br />
+    <div id="chip">
+      <div class="chip">
+    </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+    $(function () {
+        $("#fileupload").change(function () {
+            $("#chip").html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            if (regex.test($(this).val().toLowerCase())) {
+                if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                    $("#chip").show();
+                    $("#chip")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+                }
+                else {
+                    if (typeof (FileReader) != "undefined") {
+                        $("#chip").show();
+                        $("#chip").append("<img />");
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("#chip img").attr("src", e.target.result);
+                        }
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    } else {
+                        alert("This browser does not support FileReader.");
+                    }
+                }
+            } else {.0
+                alert("Please upload a valid image file.");
+            }
+        });
+    });
+    </script>
+    <style type="text/css">
+    #chip
+    {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+        min-height: 50px;
+        min-width: 50px;
+        display: none;
+    }
+    </style>
+<div class="w3-button w3-padding-15 w3-center" onclick="w3_open()"><font size="4">I'm working on</font></div> </tr>
 <div class="dropdown">
   <button class="dropbtn">select class</button>
   <div class="dropdown-content">
@@ -75,7 +138,14 @@
   <li><a href="#HISTORY">HISTORY</a></li>
 </ul>
 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vdmuvrnnj64r49ms9jmbr0m100%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="750" height="500" frameborder="0" scrolling="no"></iframe>
-
+<script src="https://apis.google.com/js/platform.js"></script>
+ <div id="placeholder-div1"></div>
+ <script>
+   gapi.hangout.render('placeholder-div1', {
+     'render': 'createhangout',
+     'initial_apps': [{'app_id' : '184219133185', 'start_data' : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }]
+   });
+ </script>
 <style>
 ul {
 list-style-type: none;
