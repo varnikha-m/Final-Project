@@ -1,147 +1,122 @@
 <!DOCTYPE html>
+<link rel = "stylesheet" href="scholaris.css">
 <html>
-<link rel = "stylesheet" href="scholaris.css"
-
   <head>
-    <h1 align="center">ENGLISH
-      <div class="w3-top">
-        <div class="w3-button w3-xxlarge w3-circle w3-white w3-left">+ </div>
-        <div class="w3-left w3-padding-5"><font size="2">ADD CLASS</font></div>
-        <div class="w3-button w3-padding-16 w3-right" onclick="w3_open()">☰</div>
-    <ul>
-      <li></h1>
-        <title>W3.CSS</title>
+    <h1 align="center">SCHOLARIS</h1>
+        <title>Scholaris Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-.button {
-    background-color: #000000;
-    border: none;
-    color: white;
-    padding: 25px 150px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius:60px
-}
-</style>
-<style>
-#chip {
-    display: inline-block;
-    padding: 0 25px;
-    height: 50px;
-    font-size: 16px;
-    line-height: 50px;
-    border-radius: 25px;
-    background-color: #ffffff;
-}
-#chip img {
-    float: center;
-    margin: 0 10px 0 -25px;
-    height: 500px;
-    width: 550px;
-}
-</style>
-  </head>
+      <div class="w3-top">
+        <div class="w3-white w3-xlarge" style="max-width:1500px;margin:auto">
+          <div class="w3-button w3-xlarge w3-circle w3-white w3-right">+<br><font size= "2">ADD CLASS</font></br></div>
+          <div class="w3-center w3-padding-16"><font size="6">SCHOLARIS</font></div> </h2>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        </div>
+    </head>
+    <body>
+      <ul>
+        <li><a href="scholaris.html">HOME</a></li>
+        <li><a class="active"href="english.html">ENGLISH</a></li>
+        <li><a href="algebra.html">ALGEBRA II</a></li>
+        <li><a href="biology.html ">BIOLOGY </a></li>
+        <li><a href="history.html">HISTORY</a></li>
+      </ul>
+<!-- profile pic code -->
+<hr></hr>
 
-  <body>
-    <ul>
-      <li><a class="active" href="#ENGLISH ">ENGLISH</a></li>
-      <li><a href="#ALGEBRA II">ALGEBRA II</a></li>
-      <li><a href="#BIOLOGY">BIOLOGY </a></li>
-      <li><a href="#HISTORY">HISTORY</a></li>
-    </ul>
-
-    <hr></hr>
-    <table>
-      <td>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <div id="profile-container">
-        <image id="profileImage" src="english_image.jpg" />
-    </div>
-    <!--<input id="imageUpload" type="file"
-          name="profile_photo" placeholder="Photo" required="" capture>
-
-
-
-<button class="button"><font size= "4.5">UPLOAD FILE</font></button></center>-->
-
-    <div class="chip">
-</div>
-<input id="fileupload" type="file" />
-<br />
-<br />
-<div id="chip">
   <div class="chip">
-</div>
-</div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script language="javascript" type="text/javascript">
-$(function () {
-    $("#fileupload").change(function () {
-        $("#chip").html("");
-        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
-        if (regex.test($(this).val().toLowerCase())) {
-            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
-                $("#chip").show();
-                $("#chip")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
-            }
-            else {
-                if (typeof (FileReader) != "undefined") {
-                    $("#chip").show();
-                    $("#chip").append("<img />");
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        $("#chip img").attr("src", e.target.result);
-                    }
-                    reader.readAsDataURL($(this)[0].files[0]);
-                } else {
-                    alert("This browser does not support FileReader.");
-                }
-            }
-        } else {.0
-            alert("Please upload a valid image file.");
-        }
-    });
-});
-</script>
-<style type="text/css">
-
-</style>
-
-    <style>
-    ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 40;
-    overflow: hidden;
-    background-color: #333;
-    }
-    li {
-    float: left;
-    }
-    li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
-    li a:hover {
-    background-color: #111;
-    }
-
-    image{
-      width:500px;
-      length:550px;
-    }
     </div>
-    </td>
-    </table>
+    <input id="fileupload" type="file" />
+    <div id="chip">
+      <div class="chip">
+    </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+    $(function () {
+        $("#fileupload").change(function () {
+            $("#chip").html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            if (regex.test($(this).val().toLowerCase())) {
+                if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                    $("#chip").show();
+                    $("#chip")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+                }
+                else {
+                    if (typeof (FileReader) != "undefined") {
+                        $("#chip").show();
+                        $("#chip").append("<img />");
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("#chip img").attr("src", e.target.result);
+                        }
+                        reader.readAsDataURL($(this)[0].files[0]);
+                    } else {
+                        alert("This browser does not support FileReader.");
+                    }
+                }
+            } else {.0
+                alert("Please upload a valid image file.");
+            }
+        });
+    });
+    </script>
+    <style type="text/css">
+    #chip
+    {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+        min-height: 50px;
+        min-width: 50px;
+        display: none;
+    }
     </style>
+<!-- profile pic code ends-->
+<div class="dropdown" align="center">
+  <p>I'm working on</p>
+  <button class="dropbtn">select class</button>
+  <div class="dropdown-content">
+    <a href="#">Algebra</a>
+    <a href="#">English</a>
+    <a href="#">Biology</a>
+    <a href="#">History</a>
 
-</body>
+  </div>
+</div>
+
+
+<hr></hr>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vdmuvrnnj64r49ms9jmbr0m100%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style="border-width:0" width="1500" height="600" frameborder="0" scrolling="no"></iframe>
+<script src="https://apis.google.com/js/platform.js"></script>
+ <div id="placeholder-div1"></div>
+ <!--<script>
+   gapi.hangout.render('placeholder-div1', {
+     'render': 'createhangout',
+     'initial_apps': [{'app_id' : '184219133185', 'start_data' : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }]
+   });
+ </script>-->
+<style>
+ul {
+list-style-type: none;
+margin: 5;
+padding: 40;
+overflow: hidden;
+background-color: #333;
+}
+li {
+float: left;
+}
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 25px;
+text-decoration: none;
+}
+li a:hover {
+background-color: #111;
+}
+</style>
+</div>
+  </body>
 </html>
